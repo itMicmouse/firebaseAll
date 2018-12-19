@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "58338948700",
+    "firebase_url": "https://addall-7025d.firebaseio.com",
+    "project_id": "addall-7025d",
+    "storage_bucket": "addall-7025d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58338948700:android:408f2a7bd8630da8",
+        "android_client_info": {
+          "package_name": "com.yangyakun.addall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58338948700-u8a8tb8cbv14ua728cekmrm95t1l34qf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_k52wDpmHhIdUxbddFXZ9DKfoHXiQIIM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
