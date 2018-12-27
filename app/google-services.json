@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "58338948700",
-    "firebase_url": "https://addall-7025d.firebaseio.com",
-    "project_id": "addall-7025d",
-    "storage_bucket": "addall-7025d.appspot.com"
+    "project_number": "666237630070",
+    "firebase_url": "https://fir-all-4f612.firebaseio.com",
+    "project_id": "fir-all-4f612",
+    "storage_bucket": "fir-all-4f612.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:58338948700:android:408f2a7bd8630da8",
+        "mobilesdk_app_id": "1:666237630070:android:408f2a7bd8630da8",
         "android_client_info": {
           "package_name": "com.yangyakun.addall"
         }
       },
       "oauth_client": [
         {
-          "client_id": "58338948700-u8a8tb8cbv14ua728cekmrm95t1l34qf.apps.googleusercontent.com",
+          "client_id": "666237630070-dui9kgbvq0ffvmta45ost0sjei6n8o0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yangyakun.addall",
+            "certificate_hash": "2078389286372383007960cc75632d1c62220486"
+          }
+        },
+        {
+          "client_id": "666237630070-vm4daudpqjhtgc9m8fijknv6j04gissh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB_k52wDpmHhIdUxbddFXZ9DKfoHXiQIIM"
+          "current_key": "AIzaSyBkS5Y244_AHntOl5KweZtX7kwacsvpVzo"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666237630070-vm4daudpqjhtgc9m8fijknv6j04gissh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +24,8 @@ public class AuthActivity extends AppCompatActivity {
 
     private Button BtnCreateUser;
     private Button BtnSignUser;
+    private Button btn_sign_out_user;
+    private TextView tv_userinfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,8 @@ public class AuthActivity extends AppCompatActivity {
 
         BtnCreateUser = findViewById(R.id.btn_create_user);
         BtnSignUser = findViewById(R.id.btn_sign_user);
+        tv_userinfo = findViewById(R.id.tv_userinfo);
+        btn_sign_out_user = findViewById(R.id.btn_sign_out_user);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -41,9 +46,11 @@ public class AuthActivity extends AppCompatActivity {
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    tv_userinfo.setText(user.getEmail());
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
+                    tv_userinfo.setText("");
                 }
             }
         };
@@ -59,6 +66,16 @@ public class AuthActivity extends AppCompatActivity {
                 signUser();
             }
         });
+        btn_sign_out_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOUtUser();
+            }
+        });
+    }
+
+    private void signOUtUser() {
+        mAuth.signOut();
     }
 
     private void signUser() {
@@ -67,7 +84,6 @@ public class AuthActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
-
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
@@ -75,6 +91,9 @@ public class AuthActivity extends AppCompatActivity {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(AuthActivity.this, "登录失败",
                                     Toast.LENGTH_SHORT).show();
+                        }else {
+                            AuthResult result = task.getResult();
+                            tv_userinfo.setText(result.getUser().getEmail());
                         }
                     }
                 });
